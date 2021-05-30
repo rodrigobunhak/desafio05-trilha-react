@@ -32,37 +32,75 @@ export default function Home() {
         <title>Space Traveling</title>
       </Head>
 
-      <main>
+      <main className={styles.contentContainer}>
         <img src="/images/logo.svg" alt="logo"/>
 
-        <div>
+        <div className={styles.posts}>
           <a href="#">
             <strong>Como utilizar Hooks</strong>
             <p>Pensando em sincronização em vez de ciclos de vida.</p>
-            <time>15 Mar 2021</time>
-            <p>Joseph Oliveira</p>
+            <div className={styles.info}>
+              <div className={styles.createdAt}>
+                <img src="/images/calendar.svg" alt="calendar_icon"/>
+                <time>15 Mar 2021</time>
+              </div>
+              <div className={styles.author}>
+                <img src="/images/author.svg" alt="author_icon"/>
+                <span>Joseph Oliveira</span>
+              </div>
+            </div>
           </a>
-        </div>
 
-        <div>
           <a href="#">
             <strong>Criando um app CRA do zero</strong>
             <p>Tudo sobre como criar a sua primeira aplicação utilizando Create React App</p>
-            <time>19 Abr 2021</time>
-            <p>Danilo Vieira</p>
+            <div className={styles.info}>
+              <div className={styles.createdAt}>
+                <img src="/images/calendar.svg" alt="calendar_icon"/>
+                <time>19 Abr 2021</time>
+              </div>
+              <div className={styles.author}>
+                <img src="/images/author.svg" alt="author_icon"/>
+                <span>Danilo Vieira</span>
+              </div>
+            </div>
           </a>
-        </div>
 
-        <div>
           <a href="#">
             <strong>Como utilizar Hooks</strong>
             <p>Pensando em sincronização em vez de ciclos de vida.</p>
-            <time>15 Mar 2021</time>
-            <p>Joseph Oliveira</p>
+            <div className={styles.info}>
+              <div className={styles.createdAt}>
+                <img src="/images/calendar.svg" alt="calendar_icon"/>
+                <time>15 Mar 2021</time>
+              </div>
+              <div className={styles.author}>
+                <img src="/images/author.svg" alt="author_icon"/>
+                <span>Joseph Oliveira</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <strong>Criando um app CRA do zero</strong>
+            <p>Tudo sobre como criar a sua primeira aplicação utilizando Create React App</p>
+            <div className={styles.info}>
+              <div className={styles.createdAt}>
+                <img src="/images/calendar.svg" alt="calendar_icon"/>
+                <time>19 Abr 2021</time>
+              </div>
+              <div className={styles.author}>
+                <img src="/images/author.svg" alt="author_icon"/>
+                <span>Danilo Vieira</span>
+              </div>
+            </div>
           </a>
         </div>
 
-        <span>Carregar mais posts</span>
+        <div className={styles.loading}>
+          <a>Carregar mais posts</a>
+        </div>
+        
       </main>
     </>
   )
