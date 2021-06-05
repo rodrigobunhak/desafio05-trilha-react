@@ -1,19 +1,16 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { RichText } from 'prismic-dom';
-import Header from '../../components/Header';
-import Prismic from '@prismicio/client';
-
 import { getPrismicClient } from '../../services/prismic';
-
-import commonStyles from '../../styles/common.module.scss';
-import styles from './post.module.scss';
 import { useRouter } from 'next/router';
-import React from 'react';
-import Head  from 'next/head';
+import { RichText } from 'prismic-dom';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-// import { Head } from 'next/document';
-// import { Head } from 'next/document';
+import Prismic from '@prismicio/client';
+import Header from '../../components/Header';
+import React from 'react';
+import Head  from 'next/head';
+
+import styles from './post.module.scss';
+import commonStyles from '../../styles/common.module.scss';
 
 interface Post {
   first_publication_date: string | null;
@@ -42,7 +39,7 @@ export default function Post({post}: PostProps ) {
     
     total += contentItem.heading.split(' ').length;
 
-    const words = contentItem.body.map(item => item.text.split(' ').length); // 4
+    const words = contentItem.body.map(item => item.text.split(' ').length);
 
     words.map(word => (total += word))
 
@@ -92,7 +89,7 @@ export default function Post({post}: PostProps ) {
             </li>
           </ul>
         </div>
-
+        <div className={styles.content}>
           {post.data.content.map(content => {
             return (
               <div className={styles.content_post} key={content.heading}>
@@ -104,7 +101,7 @@ export default function Post({post}: PostProps ) {
               </div>
             )
           })}
-
+        </div>
       </main>
     </>
   )
@@ -153,8 +150,6 @@ export const getStaticProps: GetStaticProps = async context => {
       })
     }
   }
-
-  // console.log(JSON.stringify(post.data.content, null, 2))
 
   return {
     props: {

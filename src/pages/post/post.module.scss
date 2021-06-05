@@ -10,7 +10,10 @@
 
   h1 {
     font-size: 3rem;
+    line-height: 3.625rem;
     font-weight: 700;
+    color: var(--heading);
+    letter-spacing: -0.5px;
   }
 
   ul {
@@ -26,13 +29,13 @@
       time {
         font-size: 0.875rem;
         margin-left: 0.5rem;
-        color: var(--gray-300);
+        color: var(--info);
       }
   
       span {
         font-size: 0.875rem;
         margin-left: 0.5rem;
-        color: var(--gray-300);
+        color: var(--info);
       }
     }
   }
@@ -41,21 +44,27 @@
 .content_post {
 
   font-size: 1.125rem;
-  line-height: 2rem;
+  line-height: 140%;
   font-weight: 400;
-  color: var(--gray-200);
+  color: var(--body);
+  // margin-bottom: 5rem;
 
   h2 {
     display: inline-block;
-    margin: 3rem 0 1rem 0;
+    margin: 4rem 0 3rem 0;
     font-size: 2rem;
+    color: var(--heading);
+  }
+
+  p {
+    line-height: 140%;
   }
 
   ul {
     flex-direction: column;
 
     li {
-      line-height: 2rem;
+      line-height: 140%;
     }
   }
 
@@ -63,54 +72,7 @@
     color: var(--pink);
   }
 }
-//   .content {
-    
-//     margin-top: 4rem;
 
-//     h2 {
-//       font-size: 2.25rem;
-//     }
-
-//     .body {
-
-//       article {
-//         display: block;
-//         background: red;
-//         margin-top: 6rem;
-
-//         h2 {
-//           display: inline-block;
-//           margin-top: 2rem;
-//         }
-//       }
-
-//       h2 {
-//         display: block;
-//         margin-top: 3rem;
-//         background-color: red;
-//       }
-
-//       ul {
-//         display: flex;
-//         flex-direction: column;
-//         font-size: 1rem;
-//       }
-
-//       p {
-//         font-size: 1rem;
-//       }
-     
-//     }
-
-//     .body {
-//       margin-top: 1rem;
-//       font-size: 1.125rem;
-//       font-weight: 400;
-//       color: var(--gray-200);
-//     }
-
-//     strong {
-//       color: var(--pink);
-//     }
-//   }
-// }
+.content {
+  margin-bottom: 6rem;
+}
